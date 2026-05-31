@@ -1,0 +1,14 @@
+def multiples_of_3_or_5 (limit):
+    """
+    Calculates the sum of all natural numbers below the limit 
+    that are multiples of 3 or 5 using a generator expression.
+    
+    Time Complexity: O(n)
+    Space Complexity: O(1)
+    """
+
+    if limit < 0:
+        raise ValueError("Limit should not be less than zero")
+
+    return sum(i for i in range(limit) if i % 3 == 0 or i % 5 == 0)
+
